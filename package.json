@@ -1,0 +1,31 @@
+{
+  "name": "animais-fantastico",
+  "version": "1.0.0",
+  "description": "<p>Praticando JavaScript</p>\r <ul>\r <li>Objetos</li>\r <li>Dom</li>\r <li>JavaScript Assíncrono</li>\r <li>Classes</li>\r </ul>\r <br>",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production ./js/script.js -o ./main.js",
+    "dev": "webpack --mode development --watch ./js/script.js -o ./main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaelsantos499/Animais-Fantastio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafaelsantos499/Animais-Fantastio/issues"
+  },
+  "homepage": "https://github.com/rafaelsantos499/Animais-Fantastio#readme",
+  "devDependencies": {
+    "eslint": "^8.3.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "lodash": "^4.17.21"
+  }
+}
