@@ -1,9 +1,9 @@
-[data-menu="button"] {
+[data-menu='button'] {
   display: none;
 }
 
 @media (max-width: 700px) {
-  .js [data-menu="button"] {
+  .js [data-menu='button'] {
     display: flex;
     align-items: center;
     background: #222;
@@ -11,7 +11,7 @@
     padding: 0.5rem 1rem;
     border-radius: 4px;
     text-transform: uppercase;
-    font-family: "IBM Plex Mono", monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-weight: bold;
     color: #fff;
     cursor: pointer;
@@ -20,8 +20,8 @@
     z-index: 13;
   }
 
-  .js [data-menu="button"]::before {
-    content: "";
+  .js [data-menu='button']::before {
+    content: '';
     margin-right: 4px;
     display: inline-block;
     height: 2px;
@@ -31,11 +31,11 @@
     transition: 0.3s transform;
   }
 
-  .js [data-menu="button"].active::before {
+  .js [data-menu='button'].active::before {
     transform: rotate(90deg);
   }
 
-  .js [data-menu="list"] {
+  .js [data-menu='list'] {
     display: none;
     position: absolute;
     background-color: #fb5;
@@ -46,7 +46,7 @@
     box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
   }
 
-  .js [data-menu="list"].active {
+  .js [data-menu='list'].active {
     display: block;
     animation: show-right 0.3s forwards;
   }
@@ -63,7 +63,5 @@
   .initial {
     margin-top: 3.5rem;
   }
-  .dropdown-menu::before {
-    top: 30px;
-  }
+  
 }
