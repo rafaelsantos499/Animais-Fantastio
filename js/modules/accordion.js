@@ -18,4 +18,4 @@ export default function initAccordion() {
         })
     }
 }
-console.log('ola')
+console.log('hey')
