@@ -1,27 +1,32 @@
-export default function initTabNav() {
-    const tabMenu = document.querySelectorAll('[data-tab="menu"] li')
-    const tabContent = document.querySelectorAll('[data-tab="content"] section')
-
-    // Adicionar e remover class 'ativo'
-    function activeTab(index) {
-        tabContent.forEach((evento) => {
-            evento.classList.remove('ativo')
-        })
-        const direcao = tabContent[index].dataset.anime;
-        tabContent[index].classList.add('ativo', direcao)
+export default class TabNav {
+    constructor(menu, content) {
+        this.tabMenu = document.querySelectorAll(menu)
+        this.tabContent = document.querySelectorAll(content)
+        this.activeClass = 'ativo'
     }
 
-    // verificar se realmente tem os elementos no HTML
+    // ativa a tap de acordo com index da mesma
 
-    if (tabMenu.length && tabContent.length) {
-        // adicionar class 'ativo' na section
+    activeTab(index) {
+        this.tabContent.forEach((evento) => {
+            evento.classList.remove(this.activeClass)
+        })
+        const direcao = this.tabContent[index].dataset.anime;
+        this.tabContent[index].classList.add(this.activeClass, direcao)
+    }
+    //adiciona os eventos nas tabs
 
-        tabContent[0].classList.add('ativo')
-
-        tabMenu.forEach((itemMenu, index) => {
-            itemMenu.addEventListener('click', () => {
-                activeTab(index)
-            })
+    addTabNavEvent() {
+        this.tabMenu.forEach((itemMenu, index) => {
+            itemMenu.addEventListener('click', () => this.activeTab(index))
         })
     }
+    init() {
+        if (this.tabMenu.length && this.tabContent.length) {
+            //ativar o primeiro iten
+            this.addTabNavEvent(0)
+            this.addTabNavEvent()
+        }
+    }
+
 }
