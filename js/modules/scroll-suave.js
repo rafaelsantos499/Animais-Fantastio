@@ -28,7 +28,7 @@ export default class ScroolSuave {
     init() {
         if (this.linkInternos.length) {
             this.addLinkEvent()
-            return this
         }
+        return this
     }
 }

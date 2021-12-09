@@ -2,7 +2,7 @@ export default class ToolTip {
     constructor(tooltips) {
         this.tooltip = document.querySelectorAll(tooltips)
 
-        //bind do objeto da classes aos callbacks
+        // bind do objeto da classes aos callbacks
 
         this.onMouseLeave = this.onMouseLeave.bind(this)
         this.onMouseMove = this.onMouseMove.bind(this)
@@ -16,15 +16,13 @@ export default class ToolTip {
         this.toolTipBox.style.top = `${event.pageY + 20}px`
 
         if (event.pageX + 240 > window.innerWidth) {
-
             this.toolTipBox.style.left = `${event.pageX - 190}px`
-
         } else {
             this.toolTipBox.style.left = `${event.pageX + 20}px`
         }
     }
 
-    //remove a toolTip e os esventos de mouseover e mouseleave
+    // remove a toolTip e os esventos de mouseover e mouseleave
 
     onMouseLeave({ currentTarget }) {
         this.toolTipBox.remove()
@@ -42,13 +40,13 @@ export default class ToolTip {
         this.toolTipBox = toolTipBox
     }
 
-    // cria a tooltio e adiciona os eventos 
+    // cria a tooltio e adiciona os eventos
     // de mouseove e maouse leave  ao target
 
     onMouseOver({ currentTarget }) {
         // cria a tolltipbox e coloca em uma propriedade
 
-        this.criarTooltipBox(event.currentTarget)
+        this.criarTooltipBox(currentTarget)
 
         currentTarget.addEventListener('mouseleave', this.onMouseLeave)
         currentTarget.addEventListener('mousemove', this.onMouseMove)
@@ -62,7 +60,6 @@ export default class ToolTip {
     }
 
     init() {
-
         if (this.tooltip.length) {
             this.addToolTipsEvent()
         }

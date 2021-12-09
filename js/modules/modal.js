@@ -1,18 +1,15 @@
 export default class Modal {
-
     constructor(btnAbrir, btnFechar, containeModal) {
         this.btnAbrir = document.querySelector(btnAbrir)
         this.btnFechar = document.querySelector(btnFechar)
         this.containeModal = document.querySelector(containeModal)
 
-        // bind this ao callback para 
-        // fazer refêrencia ao objeto 
+        // bind this ao callback para
+        // fazer refêrencia ao objeto
         // da classe
 
         this.eventToggleModal = this.eventToggleModal.bind(this)
         this.fecharTotal = this.fecharTotal.bind(this)
-
-
     }
 
     // abre e fecha modal
@@ -26,14 +23,10 @@ export default class Modal {
         this.toggleModal()
     }
 
-
     // fecha o modal ao clicar fora
     fecharTotal(event) {
-
-
         if (event.target === this.containeModal) { // target  seleciona o elemento clicado
             this.toggleModal()
-
         }
     }
 
