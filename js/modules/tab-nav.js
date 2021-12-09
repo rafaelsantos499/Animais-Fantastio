@@ -25,7 +25,7 @@ export default class TabNav {
     init() {
         if (this.tabMenu.length && this.tabContent.length) {
             // ativar o primeiro iten
-            this.addTabNavEvent(0)
+            this.activeTab(0)
             this.addTabNavEvent()
         }
         return this
