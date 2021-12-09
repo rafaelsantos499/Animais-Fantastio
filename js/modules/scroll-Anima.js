@@ -1,10 +1,12 @@
+import debounce from './debounce.js'
+
 export default class ScrollAnima {
     constructor(section) {
         this.section = document.querySelectorAll(section)
         // para o scrool começar a adicionar a class 'ativo' com 60% da tela
         this.windowMetade = window.innerHeight * 0.6;
 
-        this.checkDistance = this.checkDistance.bind(this)
+        this.checkDistance = debounce(this.checkDistance.bind(this), 200)
     }
 
     // Pega a distância de cada item em relação
