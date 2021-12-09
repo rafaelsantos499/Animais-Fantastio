@@ -8,12 +8,14 @@ export default class Accordion {
         item.classList.toggle(this.activeClass)
         item.nextElementSibling.classList.toggle(this.activeClass)
     }
+
     // adiciona os eventos no accorcdion
     addAccordionEvent() {
         this.accordionList.forEach((item) => {
             item.addEventListener('click', () => this.toggleAccordion(item))
         })
     }
+
     // iniciar funçao
     init() {
         if (this.accordionList.length) {
@@ -23,5 +25,4 @@ export default class Accordion {
         }
         return this
     }
-
 }
