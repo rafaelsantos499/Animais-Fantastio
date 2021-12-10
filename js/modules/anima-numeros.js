@@ -8,8 +8,7 @@ export default class AnimaNumeros {
         this.handleMutation = this.handleMutation.bind(this);
     }
 
-
-    //recebe um elemento do Dom, com número em seu texto
+    // recebe um elemento do Dom, com número em seu texto
     // incrementa a partir de 0 até o número final
     static incrementarNumero(numero) {
         const total = +numero.innerText
@@ -31,7 +30,7 @@ export default class AnimaNumeros {
     // número selecionado do dom
 
     animaNumeros() {
-        this.numeros.forEach(numero => this.constructor.incrementarNumero(numero))
+        this.numeros.forEach((numero) => this.constructor.incrementarNumero(numero))
     }
 
     // Função quando ocorre quando a mutação ocorrer
@@ -49,11 +48,11 @@ export default class AnimaNumeros {
         this.observer = new MutationObserver(this.handleMutation);
         this.observer.observe(this.observerTarget, { attributes: true });
     }
+
     init() {
         if (this.numeros.length && this.observerTarget) {
             this.addMutationObserver();
         }
         return this
     }
-
 }
