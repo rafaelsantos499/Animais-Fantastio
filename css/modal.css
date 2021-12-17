@@ -16,12 +16,15 @@
 }
 
 .modal {
-  min-width: 300px;
+  width: 80vh;
+  max-width: 400px;
   background: #fff;
   padding: 40px;
   border: 10px solid #fb5;
   box-shadow: 0 0 0 10px #fff;
   position: relative;
+  box-sizing: border-box;
+  margin: 0 30px;
 }
 
 @keyframes modal {
@@ -39,7 +42,7 @@
   animation: modal 0.3s forwards;
 }
 .fechar {
-  background-color: #e54;
+  background: #e54 url(../img/fechar.svg) no-repeat center center;
   width: 50px;
   height: 50px;
   border: 4px solid #fff;
@@ -48,14 +51,12 @@
   top: -30px;
   right: -30px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
-  font-size: 1.2rem;
-  color: white;
-  font-family: "IMB Plex Mono", monospace;
+
   cursor: pointer;
 }
 
 .modal label {
-  font-family: "IMB Plex Mono", monospace;
+  font-family: 'IMB Plex Mono', monospace;
   display: block;
   font-weight: bold;
   margin: 1rem 0 0.5rem 0;
@@ -65,9 +66,11 @@
   width: 100%;
   padding: 0.5rem 0.5rem;
   box-sizing: border-box;
+  border: 2px solid #222;
+  border-radius: 0;
 }
 
-.modal button[type="submit"] {
+.modal button[type='submit'] {
   display: block;
   background-color: #e54;
   border: none;
@@ -75,7 +78,7 @@
   padding: 0.7rem 2rem;
   font-size: 1rem;
   color: #fff;
-  font-family: "IMB Plex Mono", monospace;
+  font-family: 'IMB Plex Mono', monospace;
   font-weight: bold;
   margin-top: 1rem;
 }

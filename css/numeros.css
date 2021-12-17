@@ -8,11 +8,11 @@
 .numero-animal h3 {
   margin-bottom: 0.5rem;
   font-size: 2rem;
-  font-family: "Playfair Display SC";
+  font-family: 'Playfair Display SC';
 }
 
 .numeros-grid span {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: 'IBM Plex Mono', monospace;
   font-weight: bold;
   font-size: 1.5rem;
   color: #e54;
@@ -20,6 +20,9 @@
 
 @media (max-width: 700px) {
   .numeros-grid {
-    grid-column: 1;
+    grid-column: 1/-1;
+  }
+  .numero-animal h3 {
+    font-size: 1.5rem;
   }
 }
