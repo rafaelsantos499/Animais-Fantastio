@@ -16,7 +16,8 @@
         "semi": 0,
         "indent":"off",
         "no-param-reassign": 0,
-        "import/extensions":0
+        "import/extensions":0,
+        "max-classes-per-file": ["error", 2]
               
     }
 }

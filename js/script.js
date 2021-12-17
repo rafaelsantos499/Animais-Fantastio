@@ -10,6 +10,7 @@ import ScrollAnima from './modules/scroll-Anima.js'
 import DropdownMenu from './modules/dropdown-menu.js';
 import MenuMobile from './modules/menu-mobile.js';
 import Funcionamento from './modules/funcionamento.js'
+import SlideNav from './modules/slide.js';
 
 const scrollSuave = new ScroolSuave('[data-menu="suave"] a[href^="#"]')
 scrollSuave.init()
@@ -42,3 +43,8 @@ animationMenu();
 
 fetchAnimais('./animaisapi.json', '.numeros-grid');
 fetchBitCoin('https://www.blockchain.com/ticker', '.btc-preco')
+
+const slide = new SlideNav('.slide', '.wrapper')
+slide.init()
+
+slide.addControl('.custom-control')
